@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+  h1 Edit Contact
+  //- Display error messages
+  if errorMessage
+    p.error-message= errorMessage
+
+  if contact
+    form.card.p-3(action=`/contacts/${contact.id}` method='post')
+      input(type='hidden' name='_method' value='put')
+
+      //- Display error messages next to the corresponding input fields
+      if errorMessage && errorMessage.includes('First name')
+        p.error-message= errorMessage
+
+      label(for='firstName') First Name:
+      input.form-control(type='text' name='firstName' value=contact.firstName required)
+
+      if errorMessage && errorMessage.includes('Last name')
+        p.error-message= errorMessage
+
+      label(for='lastName') Last Name:
+      input.form-control(type='text' name='lastName' value=contact.lastName required)
+
+      if errorMessage && errorMessage.includes('Email address')
+        p.error-message= errorMessage
+
+      label(for='emailAddress') Email Address:
+      input.form-control(type='text' name='emailAddress' value=contact.emailAddress)
+
+      label(for='notes') Notes:
+      textarea.form-control(name='notes') #{contact.notes}
+      button.btn.btn-warning(type='submit') Update Contact
+
+    //- Add the delete form
+    form(style='display:inline-block', method='post', action=`/contacts/${contact.id}/delete`)
+      button.btn.btn-danger(type='submit') Delete Contact
+
+    a.btn.btn-secondary(href='/contacts') Cancel

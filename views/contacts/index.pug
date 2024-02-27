@@ -1,0 +1,45 @@
+extends ../layout
+
+block content
+  h1 All Contacts
+
+  // Add conditional check for contacts
+  if contacts && contacts.length
+    table.table.table-striped
+      thead
+        tr
+          th ID
+          th First Name
+          th Last Name
+          th Email Address
+          th Actions
+      tbody
+        each contact in contacts
+          tr
+            td #{contact.id}
+            td #{contact.firstName}
+            td #{contact.lastName}
+            td #{contact.emailAddress}
+            td
+              a.btn.btn-primary(href=`/contacts/${contact.id}`) View
+              // a.btn.btn-warning(href=`/contacts/${contact.id}/edit`) Edit
+              // form(style='display:inline-block', method='post', action=`/contacts/${contact.id}/delete`)
+              //   button.btn.btn-danger(type='submit') Delete
+  else
+    p No contacts available
+
+  a.btn.btn-success(href='/contacts/new') Create New Contact
+
+  // Additional content for the introduction page
+  h1 Welcome to My Contact App
+  p
+    | This is a contact database application where you can create, view, edit, and delete contacts.
+  p
+    | Feel free to explore the contacts database and manage your contacts effortlessly.
+
+  // Add a link or button to view the contacts database
+  a.btn.btn-primary(href='/contacts') View Contacts Database
+
+  // Include your contact info if needed
+  p
+    | For any inquiries or support, contact us at support@example.com.

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "2",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "emailAddress": "jane.doe@example.com",
+    "notes": "Another sample contact",
+    "createdAt": "2024-02-18T08:47:49.487Z",
+    "updatedAt": "2024-02-18T19:35:06.467Z"
+  },
+  {
+    "id": "generated-id-1708051549870",
+    "firstName": "Samhitha",
+    "lastName": "Sampath",
+    "emailAddress": "samhithavinni@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-16T02:47:07.373Z",
+    "updatedAt": "2024-02-16T02:47:07.373Z"
+  },
+  {
+    "id": "generated-id-1708051767029",
+    "firstName": "Kane",
+    "lastName": "Dann",
+    "emailAddress": "kanedanny@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-16T04:18:14.876Z",
+    "updatedAt": "2024-02-16T04:18:14.877Z"
+  },
+  {
+    "id": "generated-id-1708993681550",
+    "firstName": "Sujatha",
+    "lastName": "Sampath",
+    "emailAddress": "sujathasampath@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-27T00:28:01.550Z",
+    "updatedAt": "2024-02-27T00:28:01.550Z"
+  },
+  {
+    "id": "generated-id-1708993736316",
+    "firstName": "Hina",
+    "lastName": "James",
+    "emailAddress": "hinajames@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-27T00:28:56.316Z",
+    "updatedAt": "2024-02-27T00:28:56.316Z"
+  },
+  {
+    "id": "generated-id-1709017046183",
+    "firstName": "Nam",
+    "lastName": "Sam",
+    "emailAddress": "namsam@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-27T06:57:26.183Z",
+    "updatedAt": "2024-02-27T06:57:26.183Z"
+  }
+]

@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+  h1 Contact Details
+  if errorMessage
+    p.error-message= errorMessage
+
+  div.card
+    div.card-body
+      h5.card-title Contact Information
+      p.card-text
+        strong ID:
+        | #{contact.id}
+      p.card-text
+        strong First Name:
+        | #{contact.firstName}
+      p.card-text
+        strong Last Name:
+        | #{contact.lastName}
+      p.card-text
+        strong Email Address:
+        | #{contact.emailAddress}
+      p.card-text
+        strong Notes:
+        | #{contact.notes}
+
+    div.card-footer
+      p.card-text
+        strong Date Created:
+          | #{contact.createdAt ? new Date(contact.createdAt).toLocaleString() : 'N/A'}
+      p.card-text
+        strong Date Updated:
+          | #{contact.updatedAt ? new Date(contact.updatedAt).toLocaleString() : 'N/A'}
+
+  // Add buttons for editing and deleting the contact
+  a.btn.btn-warning(href=`/contacts/${contact.id}/edit`) Edit Contact
+  form(style='display:inline-block', method='post', action=`/contacts/${contact.id}/delete`)
+    button.btn.btn-danger(type='submit') Delete Contact
+
+  a.btn.btn-primary(href='/contacts') Back to All Contacts

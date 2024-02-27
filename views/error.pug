@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Error
+  body
+    h1= message
+    pre #{error.status || error.statusCode}: #{error.message}
+    pre
+      if error.stack
+        = error.stack
